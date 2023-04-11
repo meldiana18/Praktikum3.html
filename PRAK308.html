@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title> Form Pendaftaran </title>
+        <style>
+            label {
+              display: inline-block;
+              width: 130px;
+              text-align:left; 
+            }
+            input[type="text"], input[type="email"], input [type="radio"]{
+              display: inline-block;
+              width: 200px;
+            }
+          </style>  
+        </head>
+    <body>
+        <table border="3" bordercolor="black" align="center" cellspacing="3" cellpadding="5">
+            <tr bgcolor=skyblue align="center">
+                <td width="450" height="75" style="color:red; font-size: 30px; font-family: calibri;"> <b>Pendaftaran Kursus </b></td>
+            </tr>
+            <tr bgcolor=grey align="left">
+                <td width="450" height="250" style="color:black; font-size: 18px; font-family: calibri;" >
+                    <b>Data Diri </b>
+                    <br> 
+                    <br>
+                    <form action="simpan data.html" method="post">   
+                <font ty=arial size="2">
+                    <label for="name"> Nama </label>             
+                    <input type ="text" name ="nama" required>
+                    <br>
+                    <label for ="nim"> NIM </label> 
+                    <input type ="text" name ="nim" value =""maxlength="13" size="13">
+                    <br>  
+                    <label for="email"> E-mail </label>
+                    <input type="email" name="email" required> <br>
+                    <label for="tl"> Tanggal Lahir </label>
+                    <input  type="date" name="bday" ><br>
+                    Jenis Kelamin<br>
+                    <label for="lk"></label>
+                    <input type="radio" name="jenis_kelamin" value="L" id="lk"> Laki-laki
+                    <br>
+                    <label for="pr"></label>
+                    <input type="radio" name="jenis_kelamin" value="P" id="pr"> Perempuan
+                    <br>
+                    Pilih Program Kursus<br>
+                    <label for="program1"></label>
+                    <input type="checkbox" name="program1" value="C#" id="c"> C#
+                    <br>
+                    <label for="program2"></label>
+                    <input type="checkbox" name="program2" value="java" id="j"> Java
+                    <br>
+                    <label for="program3"></label>
+                    <input type="checkbox" name="program3" value="sql" id="s"> SQL
+                    <br>
+                    <label for="program4"></label>
+                    <input type="checkbox" name="program4" value="htmlphp" id="h"> HTML dan PHP <br>
+                    Pilih hari/jadwal kursus : 
+                    <select name="jadwal_kursus">
+                        <option value="dg"> Senin-Rabu/09.00-11.00 </option>
+                        <option value="pj"> Senin-Rabu/14.00-16.00</option>
+                        <option value="sa"> Kamis-Sabtu/09.00-11.00</option>
+                        <option value="ds"> Kamis-Sabtu/14.00-16.00 </option>
+                    </select>
+                </td>
+            </tr> 
+        </font>
+            <tr bgcolor=salmon
+            align="left">
+                <td width="450" height="125" style="color:black; font-size: 18px; font-family: calibri;" > 
+                    <font ty=arial size="3">
+                    Komentar Anda
+                    </font>
+        <br>
+        <textarea name="deskripsi" cols="60" rows="5" align="center"> </textarea>
+        <form>
+            <input type="submit" value="Kirim" name="submit">
+            <input type="reset" value="Ulangi" name="Reset">
+            <input type="button" value="Batal" name="Cancel">
+            </form>
+        </table>
+    </body>
+</html>
